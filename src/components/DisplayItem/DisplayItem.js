@@ -32,7 +32,7 @@ const ErrorItem = () =>
 
 /**
  * Implements Ex.Co item
- * Note: no bottom bar for ex.co - no duration, no logo provided
+ * Note: no text in bottom bar for ex.co - no duration
  */
 const MixedItem = ({ itemData }) => {
     const { title, views, thumbnail, itemId } = itemData
