@@ -1,0 +1,21 @@
+.btn__back {
+    display: block;
+    width: 320px;
+
+    padding: 1rem;
+    margin-bottom: 1em;
+
+    height: 2em;
+    line-height: 2em;
+
+    border: solid 1px #EAEAEA;
+    border-radius: 4px;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .btn__back {
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+    }
+}
