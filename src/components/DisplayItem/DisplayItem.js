@@ -5,7 +5,7 @@ import React from 'react';
 import VideoItem from './VideoItem';
 import { ReactComponent as ExcoIcon } from "../../assets/svg/exco-icon.svg";
 import { isValidItem } from './helper'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import './DisplayItem.css'
 
@@ -36,13 +36,19 @@ const ErrorItem = () =>
  */
 const MixedItem = ({ itemData }) => {
     const { title, views, thumbnail, itemId } = itemData
-    return (<Link to={`/item/${itemId}`} className="display-item">
+    /**
+     * Why <a> instead of <Link here?
+     * I know about pushState :)
+     * Having old-fashioned link fixes bug with embeding playbuzz
+     * otherwize we should debug embed code
+     */
+    return (<a href={`/item/${itemId}`} className="display-item">
         {thumbnail && (<img
             className="display-item__thumbnail"
             src={thumbnail}
             alt={title}
         />)}
-        <div to={`/item/${itemId}`} className="display-item__details">
+        <div className="display-item__details">
             <h2>{title || "Empty title"}</h2>
             <div className="display-item__info">
                 <p>{views}</p>
@@ -51,7 +57,7 @@ const MixedItem = ({ itemData }) => {
                 <ExcoIcon />
             </div>
         </div>
-    </Link>)
+    </a>)
 }
 
 export default DisplayItem;

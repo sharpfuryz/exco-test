@@ -1,3 +1,6 @@
+/**
+ * JS script for playbuzz included in public/index.html
+ */
 import React from 'react'
 import { useParams, Link } from "react-router-dom";
 

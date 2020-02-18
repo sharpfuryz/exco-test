@@ -10,7 +10,6 @@ import {
 import ItemPage from './pages/ItemPage';
 import ItemsList from './ItemsList/ItemsList';
 import Navbar from '../components/Navbar/Navbar';
-import ExcoScript from './excoScript';
 import './App.css'
 
 /**
@@ -21,7 +20,6 @@ const data = require("../data/datasource.json");
 
 const App = () => {
     return (<div className="app">
-        <ExcoScript />
         <Navbar />
         <main>
             <Router>
