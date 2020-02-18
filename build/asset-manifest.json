@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f63f80e1.chunk.css",
+    "main.js": "/static/js/main.3968b089.chunk.js",
+    "main.js.map": "/static/js/main.3968b089.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.49692e40.js",
+    "runtime-main.js.map": "/static/js/runtime-main.49692e40.js.map",
+    "static/js/2.bc18ba56.chunk.js": "/static/js/2.bc18ba56.chunk.js",
+    "static/js/2.bc18ba56.chunk.js.map": "/static/js/2.bc18ba56.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.884f3c64e5b4e6c7cdabc614d6e95ae8.js": "/precache-manifest.884f3c64e5b4e6c7cdabc614d6e95ae8.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.f63f80e1.chunk.css.map": "/static/css/main.f63f80e1.chunk.css.map",
+    "static/media/exco-icon.d93d366b.svg": "/static/media/exco-icon.d93d366b.svg",
+    "static/media/facebook-icon.91c93611.svg": "/static/media/facebook-icon.91c93611.svg",
+    "static/media/logo.84a1ce7e.svg": "/static/media/logo.84a1ce7e.svg",
+    "static/media/playbuzz-icon.30652ae7.svg": "/static/media/playbuzz-icon.30652ae7.svg",
+    "static/media/url-icon.12dcf5ae.svg": "/static/media/url-icon.12dcf5ae.svg",
+    "static/media/youtube-icon.88580940.svg": "/static/media/youtube-icon.88580940.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49692e40.js",
+    "static/js/2.bc18ba56.chunk.js",
+    "static/css/main.f63f80e1.chunk.css",
+    "static/js/main.3968b089.chunk.js"
+  ]
+}
