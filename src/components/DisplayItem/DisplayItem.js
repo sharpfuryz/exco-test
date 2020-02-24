@@ -5,7 +5,7 @@ import React from 'react';
 import VideoItem from './VideoItem';
 import { ReactComponent as ExcoIcon } from "../../assets/svg/exco-icon.svg";
 import { isValidItem } from './helper'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import './DisplayItem.css'
 
@@ -42,7 +42,7 @@ const MixedItem = ({ itemData }) => {
      * Having old-fashioned link fixes bug with embeding playbuzz
      * otherwize we should debug embed code
      */
-    return (<a href={`/item/${itemId}`} className="display-item">
+    return (<Link to={`/item/${itemId}`} className="display-item">
         {thumbnail && (<img
             className="display-item__thumbnail"
             src={thumbnail}
@@ -57,7 +57,7 @@ const MixedItem = ({ itemData }) => {
                 <ExcoIcon />
             </div>
         </div>
-    </a>)
+    </Link>)
 }
 
 export default DisplayItem;
