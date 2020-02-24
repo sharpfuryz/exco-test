@@ -7,6 +7,7 @@
     border: solid 1px #EAEAEA;
     border-radius: 4px;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .display-item.error-item {
@@ -14,11 +15,17 @@
     align-items: center;
 }
 
+.display-item__thumbnail {
+    width: 100%;
+    height: auto;
+}
+
 .display-item__details {
     padding: 1.5rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     flex: 1;
+    text-decoration: none;
 }
 
 .display-item__details h2 {

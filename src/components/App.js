@@ -1,39 +1,37 @@
-import React, { Component, lazy, Suspense } from 'react';
-
+/**
+ * This component implements entry point for the app with initial data fetch
+ */
+import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
+import ItemPage from './pages/ItemPage';
+import ItemsList from './ItemsList/ItemsList';
+import Navbar from '../components/Navbar/Navbar';
 import './App.css'
 
-import Navbar from '../components/Navbar/Navbar'
-import playbuzz from '../api/playbuzz';
+/**
+ * JSON data will be imported on compile time
+ * so we don't need a lazy loader
+ */
+const data = require("../data/datasource.json");
 
-const ItemsList = lazy(() => import('./ItemsList/ItemsList'));
-
-class App extends Component {
-    state = { items: [] };
-
-    render() {
-        return (
-            <div className="app">
-                <Navbar />
-                <main>
-                    <Suspense fallback={'Loading..'}>
-                        <ItemsList items={this.state.items} />
-                    </Suspense>
-                </main>
-            </div>
-        );
-    }
-
-    componentDidMount() {
-        this.getItems().then((res) => {
-            this.setState({items: res});
-        });
-    }
-
-    async getItems() {
-        const response = await playbuzz.get('/content/feed/resources.json');
-        return response.data.items;
-
-    }
-}
+const App = () => {
+    return (<div className="app">
+        <Navbar />
+        <main>
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <ItemsList items={data.items} />
+                    </Route>
+                    <Route path={`/item/:itemId`} component={ItemPage} />
+                </Switch>
+            </Router>
+        </main>
+    </div>)
+};
 
 export default App;
